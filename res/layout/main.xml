@@ -4,52 +4,90 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Alejandro Toro"
-        android:padding="10dp"
-        android:textColor="#000"
-        android:textColorHighlight="#444444"
-        android:textSize="22dp"
-        android:shadowColor="#777777"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:textStyle="bold"
-        android:background="#ffffff" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Jorge Franco"
-        android:padding="10dp"
-        android:textColor="#000"
-        android:textColorHighlight="#444444"
-        android:textSize="22dp"
-        android:shadowColor="#777777"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:textStyle="bold"
-        android:background="#ffffff" />
+        android:text="Aplicación Inicial"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal" />
     
-    <Button
-        android:id="@+id/button3"
+    <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Mario Laserna"
-        android:padding="10dp"
-        android:textColor="#000"
-        android:textColorHighlight="#444444"
-        android:textSize="22dp"
-        android:shadowColor="#777777"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:textStyle="bold"
-        android:background="#ffffff" />
+        android:orientation="horizontal"
+        >
     
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:padding="10dp" >
+	        
+	        <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="User 1"
+	            android:textColor="#ffffff" />
+	        <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="User 1"
+	            android:textColor="#ffffff" />
+	        <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="User 1"
+	            android:textColor="#ffffff" />
+	        <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="User 1"
+	            android:textColor="#ffffff" />
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:padding="10dp"
+	        >
+	        
+	        <TextView 
+	            android:text="Bienvenidos a la aplicación"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ffffff"
+	            android:layout_marginBottom="10dp"
+	            />
+	        
+	        <EditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Editable"
+	            android:background="#777777"
+	            android:padding="5dp"
+	            android:lines="4" />
+	        
+	        <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right" 
+	            android:text="Enviar" 
+	            android:textColor="#ffffff"
+  				android:maxHeight="20dp"
+  				android:layout_marginTop="10dp"
+	            />
+	        
+	    </LinearLayout>
+    
+    </LinearLayout>
+      
 </LinearLayout>

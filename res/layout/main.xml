@@ -35,19 +35,19 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_weight="1"
-	            android:text="User 1"
+	            android:text="User 2"
 	            android:textColor="#ffffff" />
 	        <Button
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_weight="1"
-	            android:text="User 1"
+	            android:text="User 3"
 	            android:textColor="#ffffff" />
 	        <Button
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_weight="1"
-	            android:text="User 1"
+	            android:text="User 4"
 	            android:textColor="#ffffff" />
 	        
 	    </LinearLayout>
@@ -69,12 +69,13 @@
 	            />
 	        
 	        <EditText
+	            android:id="@+id/caja_txt"
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
-	            android:text="Editable"
-	            android:background="#777777"
-	            android:padding="5dp"
-	            android:lines="4" />
+	            android:background="#ffffff"
+	            android:padding="1dp"
+	            android:lines="4"
+	            android:textColor="#000000" />
 	        
 	        <Button
 	            android:layout_width="wrap_content"
@@ -84,6 +85,7 @@
 	            android:textColor="#ffffff"
   				android:maxHeight="20dp"
   				android:layout_marginTop="10dp"
+  				android:onClick="guardar"
 	            />
 	        
 	    </LinearLayout>

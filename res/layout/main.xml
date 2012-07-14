@@ -6,11 +6,7 @@
 
     <TextView
         android:id="@+id/header_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Aplicación Inicial"
-        android:textColor="#ffffff"
-        android:gravity="center_horizontal" />
+        style="@style/header_text" />
     
     <LinearLayout 
         android:layout_width="fill_parent"
@@ -19,73 +15,39 @@
         >
     
 	    <LinearLayout
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="1"
-	        android:orientation="vertical"
-	        android:padding="10dp" >
+	        style="@style/internal_layouts" >
 	        
 	        <Button
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"
-	            android:text="User 1"
-	            android:textColor="#ffffff" />
+	            style="@style/user_buttons"
+	            android:text="User 1" />
 	        <Button
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"
-	            android:text="User 2"
-	            android:textColor="#ffffff" />
+	            style="@style/user_buttons"
+	            android:text="User 2" />
 	        <Button
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"
-	            android:text="User 3"
-	            android:textColor="#ffffff" />
+	            style="@style/user_buttons"
+	            android:text="User 3" />
 	        <Button
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"
-	            android:text="User 4"
-	            android:textColor="#ffffff" />
+	            style="@style/user_buttons"
+	            android:text="User 4" />
 	        
 	    </LinearLayout>
 	    
-	    <LinearLayout 
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="1"
-	        android:orientation="vertical"
-	        android:padding="10dp"
-	        >
+	    <LinearLayout
+	        style="@style/internal_layouts" >
 	        
 	        <TextView 
 	            android:text="Bienvenidos a la aplicación"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:textColor="#ffffff"
-	            android:layout_marginBottom="10dp"
+	            style="@style/welcome"
 	            />
 	        
 	        <EditText
 	            android:id="@+id/caja_txt"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:background="#ffffff"
-	            android:padding="1dp"
-	            android:lines="4"
-	            android:textColor="#000000" />
+	            style="@style/welcome_textbox" />
 	        
 	        <Button
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_gravity="right" 
 	            android:text="Enviar" 
-	            android:textColor="#ffffff"
-  				android:maxHeight="20dp"
-  				android:layout_marginTop="10dp"
   				android:onClick="guardar"
+  				style="@style/send_button"
 	            />
 	        
 	    </LinearLayout>

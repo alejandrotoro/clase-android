@@ -2,12 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal"
+    android:padding="15dp"
+     >
 
+    <EditText 
+        android:id="@+id/text"
+        style="@style/edit_text"
+        />
+    
     <Button
         android:id="@+id/button1"
-        android:text="About Us"
-        android:onClick="aboutUs"
+        android:text="click"
+        android:onClick="muestraMensaje"
         style="@style/button" />
     
 </LinearLayout>

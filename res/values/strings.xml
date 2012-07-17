@@ -3,5 +3,12 @@
 
     <string name="hello">Hello World, BotonesActivity!</string>
     <string name="app_name">Botones</string>
+    <string name="email_blank">Debes escribir tu email</string>
+    <string name="password_blank">Debes escribir tu contraseña</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="incorrects">Email o Contraseña incorrectos</string>
+    <string name="pass_missmatch">Las contraseñas deben coincidir</string>
+    <string name="email_missmatch">Tu correo no existe, regístrate!</string>
+    <string name="pass">Tu contraseña es: </string>
 
 </resources>

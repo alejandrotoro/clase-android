@@ -54,5 +54,20 @@
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:textSize">24dp</item>
     </style>
+    
+    <style name="back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    
+    <style name="register_back_btn">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
 
 </resources>

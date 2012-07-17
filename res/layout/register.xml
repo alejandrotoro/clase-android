@@ -6,7 +6,7 @@
     android:padding="20dp" >
     
     <TextView 
-        android:text="Inicio de Sesión"
+        android:text="Registro"
         style="@style/login_txt"
         />
     
@@ -33,7 +33,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_horizontal" >
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" >
         
         <TextView 
             android:text="Contraseña: "
@@ -47,11 +48,24 @@
         
     </LinearLayout>
     
-    <Button 
-        android:text="Login"
-        style="@style/login_btn"
-        android:onClick="validate"
-        />
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" >
+        
+        <TextView 
+            android:text="Verificar: "
+            style="@style/login_items_txt"
+            />
+        
+        <EditText 
+            style="@style/login_items_inputs"
+            android:id="@+id/verify_password"
+            />
+        
+    </LinearLayout>
     
     <LinearLayout 
         android:layout_width="fill_parent"
@@ -60,17 +74,16 @@
         android:layout_gravity="center_horizontal" >
     
 	    <Button 
-	        android:text="Registro"
-	        style="@style/register_btn"
-	        android:id="@+id/register"
-	        android:onClick="register"
-	        />
-	    
+	        android:id="@+id/back"
+	        android:text="Atrás"
+	        style="@style/register_back_btn"
+	        android:onClick="goBack" />
+    
 	    <Button 
-	        android:text="Olividaste tu contraseña"
-	        style="@style/forgot_btn"
-	        android:onClick="forgot"
-	        />
+	        android:id="@+id/register_btn"
+	        android:text="Registrar"
+	        style="@style/register_back_btn"
+	        android:onClick="validate" />
         
     </LinearLayout>
     

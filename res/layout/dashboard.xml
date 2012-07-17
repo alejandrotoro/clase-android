@@ -6,6 +6,12 @@
     
     <TextView
         android:id="@+id/welcome_txt" 
-        style="@style/welcome"/>
+        style="@style/welcome" />
+    
+    <Button 
+        android:id="@+id/back"
+        android:text="Cerrar Sesión"
+        style="@style/back"
+        android:onClick="goBack" />
 
 </LinearLayout>

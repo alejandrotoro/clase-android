@@ -10,5 +10,7 @@
     <string name="pass_missmatch">Las contraseñas deben coincidir</string>
     <string name="email_missmatch">Tu correo no existe, regístrate!</string>
     <string name="pass">Tu contraseña es: </string>
+    <string name="url">http://localhost:4567/api/v1</string>
+    <string name="connection_error">Error de conexión, inténtalo más tarde</string>
 
 </resources>

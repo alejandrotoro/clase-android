@@ -43,6 +43,7 @@
         <EditText 
             style="@style/login_items_inputs"
             android:id="@+id/password"
+            android:password="false"
             />
         
     </LinearLayout>

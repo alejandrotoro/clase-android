@@ -1,6 +1,22 @@
 package com.botones;
 
+import java.io.IOException;
 import java.io.ObjectOutputStream.PutField;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Context;
@@ -39,13 +55,41 @@ public class BotonesActivity extends Activity {
 		}else if(password_s.equals("")){
 			message = res.getString(R.string.password_blank);
 			error(message);
-		}else if(!email_s.equals(users[0]) || !password_s.equals(users[1])){
-			message = res.getString(R.string.incorrects);
-			error(message);
 		}else{
-			login(email_s);
+			/** login(email_s); */
+		    // Create a new HttpClient and Post Header
+		    HttpClient httpclient = new DefaultHttpClient();
+		    HttpPost httppost = new HttpPost("http://192.168.0.11:4567/api/v1/authenticate.json");
+		    /** httppost.setRequestProperty("Authorization", encodedString); */
+		    try {
+		        // Add your data
+		    	List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+		    	nameValuePairs.add(new BasicNameValuePair("user[email]", email_s));
+		    	nameValuePairs.add(new BasicNameValuePair("user[pass]", password_s));
+		        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+		        // Execute HTTP Post Request
+		        HttpResponse response = httpclient.execute(httppost);
+	    		int status = response.getStatusLine().getStatusCode();
+
+	    		if(status == 200){
+	    			HttpEntity e = response.getEntity();
+	    			String data = EntityUtils.toString(e);
+	    			login(data);
+	    		}else {
+	    			HttpEntity e = response.getEntity();
+	    			String data = EntityUtils.toString(e);
+					error(data);
+	    		}
+		        
+		    } catch (ClientProtocolException e) {
+				message = res.getString(R.string.connection_error);
+				error(message);
+		    } catch (IOException e) {
+				message = res.getString(R.string.connection_error);
+				error(message);
+		    }
 		}
-		
 	}
 	
 	public void login(String email){
